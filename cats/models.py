@@ -20,7 +20,6 @@ class Achievement(models.Model):
         return self.name
 
 
-
 class Cat(models.Model):
     name = models.CharField(max_length=16)
     color = models.CharField(max_length=16, choices=CHOICES)

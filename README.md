@@ -1,43 +1,82 @@
-### Как запустить проект:
+# Kittygram API
 
-Клонировать репозиторий и перейти в него в командной строке:
+## Описание
+Backend-приложение для управления котами и их достижениями.
 
-```
-git clone https://github.com/yandex-praktikum/kittygram.git
+## Технологии
+- Python 3.12
+- Django REST Framework
+
+## Запуск проекта
+
+1. Клонировать репозиторий:
+```bash
+git clone https://github.com/rolmikh/kittygram.git
 ```
 
-```
+2. Перейти в папку:
+```bash
 cd kittygram
 ```
 
-Cоздать и активировать виртуальное окружение:
-
-```
-python3 -m venv env
-```
-
-```
-source env/bin/activate
+3. Создать и активировать виртуальное окружение:
+```bash
+python -m venv venv
 ```
 
-Установить зависимости из файла requirements.txt:
+Linux / Mac:
+```bash
+source venv/bin/activate
+```
 
-```
-python3 -m pip install --upgrade pip
+Windows:
+```bash
+venv\Scripts\activate
 ```
 
-```
+4. Установить зависимости из файла:
+```bash
 pip install -r requirements.txt
 ```
 
-Выполнить миграции:
+5. Создать .env файл:
+```bash
+cp .env.example .env
+```
 
-```
-python3 manage.py migrate
+6. Применить миграции:
+```bash
+python manage.py migrate
 ```
 
-Запустить проект:
+7. Запустить сервер:
+```bash
+python manage.py runserver
+```
 
+---
+
+## Запуск через Docker
+
+Сборка и запуск:
+```bash
+docker-compose up --build
 ```
-python3 manage.py runserver
-```
+
+Приложение доступно:
+http://127.0.0.1:8000/
+
+---
+
+## Документация API
+Swagger:
+http://127.0.0.1:8000/swagger/
+
+---
+
+## Основные возможности
+- CRUD для моделей котов и достижений
+- JWT-аутентификация
+- Фильтрация, поиск, сортировка
+- Пагинация результатов  
+- Документация API (Swagger)
