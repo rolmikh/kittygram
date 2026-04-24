@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'djoser',
     'django_filters',
     'drf_spectacular',
+    'duels.apps.DuelsConfig'
 ]
 
 MIDDLEWARE = [
