@@ -31,6 +31,12 @@ class Cat(models.Model):
 
     achievements = models.ManyToManyField(Achievement, through='AchievementCat')
 
+    image = models.ImageField(
+        upload_to='cats/images/', 
+        null=True,  
+        default=None
+    )
+
 
     class Meta:
         constraints = [
