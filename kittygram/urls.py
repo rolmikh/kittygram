@@ -9,6 +9,7 @@ from cats.views import(
 )
 from duels.views import(
     DuelViewSet,
+    TournamentViewSet
 )
 
 router = DefaultRouter()
@@ -16,6 +17,7 @@ router.register('cats', CatViewSet)
 router.register('users', UserViewSet)
 router.register('achievements', AchievementViewSet)
 router.register('duels', DuelViewSet)
+router.register('tournaments', TournamentViewSet)
 
 urlpatterns = [
    path('', include(router.urls)),
