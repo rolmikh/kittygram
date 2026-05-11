@@ -26,6 +26,7 @@ from .serializers import (
 
 
 class DuelViewSet(viewsets.ModelViewSet):
+    http_method_names = ['get', 'post']
 
     queryset = Duel.objects.all()
 
@@ -222,6 +223,8 @@ class DuelViewSet(viewsets.ModelViewSet):
 
 
 class TournamentViewSet(viewsets.ModelViewSet):
+
+    http_method_names = ['get', 'post']
 
     queryset = Tournament.objects.all()
 

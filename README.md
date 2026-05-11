@@ -82,6 +82,65 @@ POST /auth/jwt/create/
   "password": "password"
 }
 
+### Создание турнира
+Запрос: 
+
+POST /tournaments/
+
+{
+  "name": "Летний кубок"
+}
+
+Ответ:
+{
+    "id": 3,
+    "name": "Летний кубок",
+    "start_date": "2026-05-11T08:39:36.944540Z",
+    "end_date": "2026-05-12T08:39:36.944540Z",
+    "status": "active",
+    "created_at": "2026-05-11T08:39:36.944871Z",
+    "winner": null
+}
+
+### Создание дуэли
+Запрос:
+
+POST /duels/
+
+{
+  "first_cat": 4,
+  "second_cat": 3,
+  "tournament": 3
+}
+
+Ответ:
+{
+    "id": 9,
+    "start_time": null,
+    "end_time": null,
+    "status": "planned",
+    "is_draw": false,
+    "created_at": "2026-05-11T08:40:18.637749Z",
+    "first_cat": 4,
+    "second_cat": 3,
+    "tournament": 3,
+    "winner": null
+}
+
+### Голосование
+Запрос:
+
+POST /duels/9/vote/
+
+{
+  "cat": 3
+}
+
+Ответ:
+{
+    "detail": "vote accepted"
+}
+
 ## Основные возможности
 - CRUD для моделей котов и достижений
 - JWT-аутентификация

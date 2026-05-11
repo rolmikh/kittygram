@@ -185,6 +185,9 @@ class Duel(models.Model):
 
     def finalize(self):
 
+        if not self.end_time or timezone.now() < self.end_time:
+            return
+
         if self.winner or self.is_draw:
             return
 
