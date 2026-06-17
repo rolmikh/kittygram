@@ -22,8 +22,8 @@ class Duel(models.Model):
         related_name='duels_as_second'
     )
 
-    start_time = models.DateTimeField()
-    end_time = models.DateTimeField()
+    start_time = models.DateTimeField(null=True, blank=True)
+    end_time = models.DateTimeField(null=True, blank=True)
 
     status = models.CharField(
         max_length=10,

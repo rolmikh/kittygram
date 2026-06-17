@@ -1,0 +1,175 @@
+{
+  "info": {
+    "_postman_id": "5972dda8-3ef1-44a8-ab29-30235e5a5342",
+    "name": "Duels",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27636908"
+  },
+  "item": [
+    {
+      "name": "Get Duels",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/duels/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "duels",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Duels",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/duels/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "duels",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Vote Duels",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/duels/14/vote/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "duels",
+            "14",
+            "vote",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Result",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/duels/10/results/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "duels",
+            "10",
+            "results",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get active duels",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/duels/?status=active",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "duels",
+            ""
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "active"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JWT Auth",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MTExOTI3LCJpYXQiOjE3NzcwMjU1MjgsImp0aSI6ImE3MGRkZTkwOWY4OTRmN2M5ZGM2MGYyOTk2MGY3M2VhIiwidXNlcl9pZCI6IjQifQ.rXLTWljaN1Zgensknd22w83_BEPewik5VVCvxR-Do8s",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"capybara\",\n  \"password\": \"yeppicapi\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/auth/jwt/create/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "auth",
+            "jwt",
+            "create",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
